@@ -1,5 +1,6 @@
 package test.praktek.controller;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +14,7 @@ import test.praktek.util.JwtUtil;
 @RestController
 @RequiredArgsConstructor
 @Tag(name = "2. Module Information")
+@SecurityRequirement(name = "bearerAuth")
 public class ServicePpobController {
 
     private final ServicePpobService servicePpobService;
